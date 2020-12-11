@@ -11,8 +11,10 @@ const RowComp = ({ row, complete }) => (
         case '#':
           return <div className={complete ? 'seat--filled-green' : 'seat--filled'}></div>
         default:
-          return
+          return ' '
+          break
       }
+      return ' '
     })
     }
   </div>

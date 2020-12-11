@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({ row, complete }) => (
+const RowComp = ({ row, complete }) => (
   <div className="seats__row">
     {row.map((seat) => {
       switch (seat) {
@@ -11,8 +11,11 @@ export default ({ row, complete }) => (
         case '#':
           return <div className={complete ? 'seat--filled-green' : 'seat--filled'}></div>
         default:
+          return
       }
     })
     }
   </div>
 )
+
+export default RowComp

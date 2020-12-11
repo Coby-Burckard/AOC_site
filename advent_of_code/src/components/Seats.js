@@ -4,7 +4,7 @@ import useInterval from '@use-it/interval';
 import { input, oneStep, areSeatsSame, countOccupied } from '../utils/day_11_logic'
 import Row from './Row'
 
-export default () => {
+const SeatsComp = () => {
 
   const [seats, setSeats] = useState(input)
   const [steps, setSteps] = useState(0)
@@ -35,3 +35,5 @@ export default () => {
     </div>
   )
 }
+
+export default SeatsComp

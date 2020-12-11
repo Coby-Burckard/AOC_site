@@ -3,18 +3,22 @@ import React from 'react'
 const RowComp = ({ row, complete }) => (
   <div className="seats__row">
     {row.map((seat) => {
+      let newComp
       switch (seat) {
         case ' ':
-          return <div className="seat"></div>
+          newComp = <div className="seat"></div>
+          break
         case 'L':
-          return <div className="seat--unfilled"></div>
+          newComp = <div className="seat--unfilled"></div>
+          break
         case '#':
-          return <div className={complete ? 'seat--filled-green' : 'seat--filled'}></div>
+          newComp = <div className={complete ? 'seat--filled-green' : 'seat--filled'}></div>
+          break
         default:
-          return ' '
+          newComp = <div className="seat--unfilled"></div>
           break
       }
-      return ' '
+      return newComp
     })
     }
   </div>

@@ -23,7 +23,7 @@ const SeatsComp = () => {
       setSeats(oneStep(seats))
       setSteps(steps + 1)
     }
-  }, 50)
+  }, 250)
 
   return (
     <div className={topClassName}>

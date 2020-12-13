@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import useInterval from '@use-it/interval';
-
-import { input, oneStep, areSeatsSame, countOccupied } from '../utils/day_11_logic'
+import { input, oneStep, areSeatsSame, countOccupied } from '../../utils/day_11_logic'
 import Row from './Row'
 
 const SeatsComp = () => {
@@ -11,7 +10,7 @@ const SeatsComp = () => {
   const [occupiedSeats, setoccupiedSeats] = useState(0)
   const [complete, setComplete] = useState(false)
 
-  const topClassName = complete ? 'seats--green' : 'seats'
+  const solution_class = complete ? 'solution--green' : 'solution'
 
   useInterval(() => {
     if (!complete) {
@@ -26,7 +25,7 @@ const SeatsComp = () => {
   }, 250)
 
   return (
-    <div className={topClassName}>
+    <div className={solution_class}>
       <div className="summary">
         <div>Steps: {steps}</div>
         <div>Occupied Seats: {occupiedSeats}</div>

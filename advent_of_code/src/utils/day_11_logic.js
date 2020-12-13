@@ -1,4 +1,4 @@
-import input from './input.js'
+import input from './day_11_input'
 
 const findVisibleSeat = (seats, row, column, rowInc, colInc) => {
   const seat = seats[row] === undefined ? undefined : seats[row][column]
